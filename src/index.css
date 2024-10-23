@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Ensure content is not hidden behind the sidebar on mobile */
+@media (max-width: 1023px) {
+  .flex-1 {
+    margin-top: 4rem;
+  }
+}
+
+/* Improve readability on smaller screens */
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Ensure buttons and interactive elements are easily tappable on mobile */
+@media (max-width: 640px) {
+  button, 
+  [type='button'], 
+  [type='reset'], 
+  [type='submit'] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Improve table responsiveness */
+@media (max-width: 640px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* Adjust main content padding */
+.flex-1 {
+  padding-top: 4rem; /* Matches the height of the mobile sidebar */
+}
+
+@media (min-width: 1024px) {
+  .flex-1 {
+    padding-top: 0;
+  }
+}
+
+/* Custom styles for sidebar */
+@media (max-width: 1023px) {
+  .sidebar-mobile {
+    height: auto;
+    width: 100%;
+  }
+  
+  .sidebar-mobile ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sidebar-desktop {
+    height: 100vh;
+    width: 16rem;
+  }
+}
+
+/* Ensure bottom navigation doesn't overlap content */
+@media (max-width: 1023px) {
+  .pb-16 {
+    padding-bottom: 5rem; /* Adjust this value based on the height of your bottom navigation */
+  }
+}
